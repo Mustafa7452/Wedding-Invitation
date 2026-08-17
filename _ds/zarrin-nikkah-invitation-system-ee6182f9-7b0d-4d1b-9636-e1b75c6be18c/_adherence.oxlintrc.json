@@ -1,0 +1,397 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "components/decor/**",
+              "components/invitation/**",
+              "ui_kits/invitation/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Cormorant Garamond|Pinyon Script|Jost))/i]",
+        "message": "Font not provided by the design system. Available: Cormorant Garamond, Pinyon Script, Jost."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ArchFrame'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|className|style|key|ref|className|style|children)$/]",
+        "message": "<ArchFrame> doesn't accept that prop. Declared props: children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|href|disabled|children|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, size, href, disabled, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:outline|solid|ghost)$/]",
+        "message": "<Button> variant must be one of 'outline' | 'solid' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Countdown'] > JSXAttribute > JSXIdentifier[name!=/^(?:target|labels|className|style|key|ref|className|style|children)$/]",
+        "message": "<Countdown> doesn't accept that prop. Declared props: target, labels, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Divider'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|width|className|style|key|ref|className|style|children)$/]",
+        "message": "<Divider> doesn't accept that prop. Declared props: variant, width, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Divider'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:diamond|flourish)$/]",
+        "message": "<Divider> variant must be one of 'diamond' | 'flourish'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Divider'] > JSXAttribute[name.name='width'] > Literal[value!=/^(?:tight|default|wide)$/]",
+        "message": "<Divider> width must be one of 'tight' | 'default' | 'wide'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Ornament'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|flip|className|style|key|ref|className|style|children)$/]",
+        "message": "<Ornament> doesn't accept that prop. Declared props: name, size, flip, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Ornament'] > JSXAttribute[name.name='flip'] > Literal[value!=/^(?:x|y|xy)$/]",
+        "message": "<Ornament> flip must be one of 'x' | 'y' | 'xy'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='RevealCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|label|revealed|defaultRevealed|onReveal|className|style|key|ref|className|style|children)$/]",
+        "message": "<RevealCard> doesn't accept that prop. Declared props: value, label, revealed, defaultRevealed, onReveal, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|eyebrow|size|face|divider|className|style|key|ref|className|style|children)$/]",
+        "message": "<SectionHeading> doesn't accept that prop. Declared props: title, eyebrow, size, face, divider, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:lg|md)$/]",
+        "message": "<SectionHeading> size must be one of 'lg' | 'md'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute[name.name='face'] > Literal[value!=/^(?:script|serif)$/]",
+        "message": "<SectionHeading> face must be one of 'script' | 'serif'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute[name.name='divider'] > Literal[value!=/^(?:diamond|flourish|none)$/]",
+        "message": "<SectionHeading> divider must be one of 'diamond' | 'flourish' | 'none'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SwatchRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:colors|className|style|key|ref|className|style|children)$/]",
+        "message": "<SwatchRow> doesn't accept that prop. Declared props: colors, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TimelineEntry'] > JSXAttribute > JSXIdentifier[name!=/^(?:time|title|icon|key|ref|className|style|children)$/]",
+        "message": "<TimelineEntry> doesn't accept that prop. Declared props: time, title, icon."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "ArchFrame": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Countdown": {
+        "replaces": []
+      },
+      "Divider": {
+        "replaces": []
+      },
+      "Ornament": {
+        "replaces": []
+      },
+      "RevealCard": {
+        "replaces": []
+      },
+      "SectionHeading": {
+        "replaces": []
+      },
+      "SwatchRow": {
+        "replaces": []
+      },
+      "TimelineEntry": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-deep",
+      "--bg-footer",
+      "--bg-page",
+      "--bg-panel",
+      "--bg-surface",
+      "--blush",
+      "--border-card",
+      "--border-frame",
+      "--border-gold",
+      "--border-hair",
+      "--bronze",
+      "--col-max",
+      "--col-width",
+      "--dur-med",
+      "--dur-quick",
+      "--dur-slow",
+      "--ease-open",
+      "--ease-out",
+      "--ease-silk",
+      "--foil-a",
+      "--foil-b",
+      "--foil-c",
+      "--foil-d",
+      "--font-display",
+      "--font-sans",
+      "--font-script",
+      "--fw-light",
+      "--fw-med",
+      "--fw-reg",
+      "--fw-semi",
+      "--fw-thin",
+      "--gap-card",
+      "--glow-gold",
+      "--glow-warm",
+      "--gold-100",
+      "--gold-200",
+      "--gold-300",
+      "--gold-400",
+      "--gold-500",
+      "--gold-600",
+      "--gold-700",
+      "--grad-foil",
+      "--grad-page",
+      "--grain",
+      "--grain-size",
+      "--ink-300",
+      "--ink-400",
+      "--ink-500",
+      "--ink-700",
+      "--ink-900",
+      "--inset-emboss",
+      "--lh-body",
+      "--lh-snug",
+      "--lh-tight",
+      "--line-gold",
+      "--line-soft",
+      "--ls-body",
+      "--ls-cap",
+      "--ls-caps-l",
+      "--ls-display",
+      "--pad-x",
+      "--paper-0",
+      "--paper-1",
+      "--paper-2",
+      "--paper-3",
+      "--paper-4",
+      "--pastel-blush",
+      "--pastel-butter",
+      "--pastel-lilac",
+      "--pastel-peach",
+      "--pastel-powder",
+      "--pastel-stone",
+      "--r-lg",
+      "--r-md",
+      "--r-pill",
+      "--r-sm",
+      "--r-xs",
+      "--section-y",
+      "--shadow-card",
+      "--shadow-col",
+      "--shadow-lift",
+      "--shadow-seal",
+      "--sp-1",
+      "--sp-10",
+      "--sp-12",
+      "--sp-16",
+      "--sp-2",
+      "--sp-20",
+      "--sp-3",
+      "--sp-4",
+      "--sp-5",
+      "--sp-6",
+      "--sp-8",
+      "--t-body",
+      "--t-body-sm",
+      "--t-cap",
+      "--t-display-lg",
+      "--t-display-md",
+      "--t-display-sm",
+      "--t-display-xl",
+      "--t-num",
+      "--t-script-lg",
+      "--t-script-md",
+      "--t-script-xl",
+      "--tap-min",
+      "--text-body",
+      "--text-heading",
+      "--text-label",
+      "--text-muted",
+      "--text-on-gold",
+      "--text-strong",
+      "--z-base",
+      "--z-content",
+      "--z-decor",
+      "--z-float",
+      "--z-gate"
+    ],
+    "tokenKinds": {
+      "--paper-0": "color",
+      "--paper-1": "color",
+      "--paper-2": "color",
+      "--paper-3": "color",
+      "--paper-4": "color",
+      "--blush": "color",
+      "--gold-100": "color",
+      "--gold-200": "color",
+      "--gold-300": "color",
+      "--gold-400": "color",
+      "--gold-500": "color",
+      "--gold-600": "color",
+      "--gold-700": "color",
+      "--bronze": "color",
+      "--ink-900": "color",
+      "--ink-700": "color",
+      "--ink-500": "color",
+      "--ink-400": "color",
+      "--ink-300": "color",
+      "--pastel-lilac": "color",
+      "--pastel-peach": "color",
+      "--pastel-butter": "color",
+      "--pastel-blush": "color",
+      "--pastel-powder": "color",
+      "--pastel-stone": "color",
+      "--foil-a": "color",
+      "--foil-b": "color",
+      "--foil-c": "color",
+      "--foil-d": "color",
+      "--bg-page": "color",
+      "--bg-surface": "color",
+      "--bg-panel": "color",
+      "--bg-footer": "color",
+      "--text-heading": "font",
+      "--text-body": "font",
+      "--text-strong": "font",
+      "--text-muted": "font",
+      "--text-label": "font",
+      "--text-on-gold": "font",
+      "--line-gold": "color",
+      "--line-soft": "color",
+      "--border-card": "color",
+      "--accent": "color",
+      "--accent-deep": "color",
+      "--grad-foil": "color",
+      "--grad-page": "color",
+      "--font-script": "font",
+      "--font-display": "font",
+      "--font-sans": "font",
+      "--fw-thin": "font",
+      "--fw-light": "font",
+      "--fw-reg": "font",
+      "--fw-med": "font",
+      "--fw-semi": "font",
+      "--t-script-xl": "font",
+      "--t-script-lg": "font",
+      "--t-script-md": "font",
+      "--t-display-xl": "font",
+      "--t-display-lg": "font",
+      "--t-display-md": "font",
+      "--t-display-sm": "font",
+      "--t-body": "font",
+      "--t-body-sm": "font",
+      "--t-cap": "font",
+      "--t-num": "font",
+      "--lh-tight": "font",
+      "--lh-snug": "font",
+      "--lh-body": "font",
+      "--ls-cap": "spacing",
+      "--ls-caps-l": "spacing",
+      "--ls-display": "font",
+      "--ls-body": "font",
+      "--sp-1": "spacing",
+      "--sp-2": "spacing",
+      "--sp-3": "spacing",
+      "--sp-4": "spacing",
+      "--sp-5": "spacing",
+      "--sp-6": "spacing",
+      "--sp-8": "spacing",
+      "--sp-10": "spacing",
+      "--sp-12": "spacing",
+      "--sp-16": "spacing",
+      "--sp-20": "spacing",
+      "--pad-x": "spacing",
+      "--section-y": "spacing",
+      "--gap-card": "spacing",
+      "--col-width": "spacing",
+      "--col-max": "spacing",
+      "--r-xs": "spacing",
+      "--r-sm": "spacing",
+      "--r-md": "spacing",
+      "--r-lg": "spacing",
+      "--r-pill": "spacing",
+      "--tap-min": "spacing",
+      "--z-base": "other",
+      "--z-decor": "other",
+      "--z-content": "other",
+      "--z-float": "other",
+      "--z-gate": "other",
+      "--shadow-card": "shadow",
+      "--shadow-lift": "shadow",
+      "--shadow-col": "shadow",
+      "--shadow-seal": "shadow",
+      "--inset-emboss": "spacing",
+      "--glow-gold": "shadow",
+      "--glow-warm": "other",
+      "--border-hair": "other",
+      "--border-gold": "other",
+      "--border-frame": "other",
+      "--grain": "other",
+      "--grain-size": "other",
+      "--ease-silk": "other",
+      "--ease-open": "other",
+      "--ease-out": "other",
+      "--dur-quick": "other",
+      "--dur-med": "other",
+      "--dur-slow": "other"
+    },
+    "fontFamilies": [
+      "Cormorant Garamond",
+      "Jost",
+      "Pinyon Script"
+    ]
+  }
+}
