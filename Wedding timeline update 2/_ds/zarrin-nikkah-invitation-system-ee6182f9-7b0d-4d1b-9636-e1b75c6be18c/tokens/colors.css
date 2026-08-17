@@ -1,0 +1,73 @@
+/* ============================================================
+   ZARRIN · COLOR TOKENS
+   Extracted from the luxe Nikkah invitation frames:
+   ivory paper, champagne / antique gold, warm taupe ink,
+   plus the soft pastel dress-code shades.
+   ============================================================ */
+:root{
+  /* ---- Paper / neutral surfaces (warm ivory) ---- */
+  --paper-0:  #FDFBF7;   /* brightest — card faces, highlights */
+  --paper-1:  #FAF5EC;   /* the main invitation background */
+  --paper-2:  #F4EBDC;   /* soft panel */
+  --paper-3:  #EBDFCB;   /* deeper panel / footer */
+  --paper-4:  #E0D0B8;   /* edge / envelope shadow tone */
+  --blush:    #F8F0EB;   /* faint pink-cream (dress-code backdrop) */
+
+  /* ---- Gold family (champagne → antique) ---- */
+  --gold-100: #F4E9CC;   /* palest gold wash */
+  --gold-200: #E9D5AC;   /* light gold */
+  --gold-300: #DBC08A;   /* soft gold */
+  --gold-400: #C9A45E;   /* PRIMARY brand gold */
+  --gold-500: #B9903F;   /* rich gold */
+  --gold-600: #9A7734;   /* deep gold — text on paper */
+  --gold-700: #7C5E28;   /* darkest gold */
+  --bronze:   #B08243;   /* wax-seal bronze */
+
+  /* ---- Ink (warm taupe-brown text) ---- */
+  --ink-900:  #3E3226;   /* headings on paper */
+  --ink-700:  #5A4A3A;   /* strong body */
+  --ink-500:  #7C6A57;   /* DEFAULT body */
+  --ink-400:  #9C8B79;   /* muted / captions */
+  --ink-300:  #B9AB99;   /* faint / placeholders */
+
+  /* ---- Pastel dress-code shades ---- */
+  --pastel-lilac:  #D9C7E8;
+  --pastel-peach:  #F6DBBE;
+  --pastel-butter: #F4E6A6;
+  --pastel-blush:  #F3D2D6;
+  --pastel-powder: #C3D6E6;
+  --pastel-stone:  #DAD0C5;
+
+  /* ---- Foil gradient stops (scratch / reveal cards) ---- */
+  --foil-a: #E7CE92;
+  --foil-b: #C9A45E;
+  --foil-c: #EEDFB6;
+  --foil-d: #B9903F;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reach for these in components
+     ============================================================ */
+  --bg-page:        var(--paper-1);
+  --bg-surface:     var(--paper-0);
+  --bg-panel:       var(--paper-2);
+  --bg-footer:      var(--paper-3);
+
+  --text-heading:   var(--gold-600);   /* script + serif display headings */
+  --text-body:      var(--ink-500);
+  --text-strong:    var(--ink-700);
+  --text-muted:     var(--ink-400);
+  --text-label:     var(--gold-600);   /* small-caps eyebrows */
+  --text-on-gold:   var(--paper-0);
+
+  --line-gold:      var(--gold-400);
+  --line-soft:      color-mix(in srgb, var(--gold-400) 45%, transparent);
+  --border-card:    color-mix(in srgb, var(--gold-400) 40%, transparent);
+
+  --accent:         var(--gold-400);
+  --accent-deep:    var(--gold-600);
+
+  /* Foil gold gradient, ready to paint */
+  --grad-foil: linear-gradient(135deg, var(--foil-a) 0%, var(--foil-b) 42%, var(--foil-c) 58%, var(--foil-d) 100%);
+  /* Soft page vignette from top */
+  --grad-page: linear-gradient(180deg, #F6ECDD 0%, var(--paper-1) 58%);
+}
