@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Nikkah Invitation" description="Luxe gold Pakistani nikkah invitation — scrolling card built from Zarrin components" -->
+<helmet>
+<script src="./ds-base.js"></script>
+<style>
+@keyframes zrSealPulse{0%{transform:translate(-50%,-50%) scale(1);opacity:.55}70%,100%{transform:translate(-50%,-50%) scale(1.55);opacity:0}}
+@keyframes zrHintFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+</style>
+</helmet>
+
+<!-- ENVELOPE GATE -->
+<div style="{{ overlayStyle }}">
+  <div style="{{ envWrapStyle }}" onClick="{{ open }}">
+    <div style="position:relative;width:min(86vw,400px);aspect-ratio:1.46 / 1;transform-style:preserve-3d;filter:drop-shadow(0 22px 40px rgba(124,106,87,.28))">
+      <!-- inside panel (revealed on open) -->
+      <div style="position:absolute;inset:0;border-radius:12px;overflow:hidden;background:var(--paper-1);border:1.5px solid color-mix(in srgb, var(--gold-400) 55%, transparent);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;z-index:1">
+        <div style="position:absolute;top:0;left:0;width:40%;opacity:.5"><x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.Ornament" name="corner-spray" size="100%" hint-size="120px,120px"></x-import></div>
+        <div style="position:absolute;top:0;right:0;width:40%;opacity:.5"><x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.Ornament" name="corner-spray" size="100%" flip="x" hint-size="120px,120px"></x-import></div>
+        <p style="font-family:var(--font-sans);font-size:var(--t-cap);letter-spacing:var(--ls-cap);text-transform:uppercase;color:var(--gold-600);margin:0">The Nikkah of</p>
+        <p style="font-family:var(--font-script);font-size:var(--t-script-lg);color:var(--gold-600);line-height:1;margin:0">Mujtaba &amp; Saniya</p>
+      </div>
+      <!-- bottom pocket seams -->
+      <svg viewBox="0 0 146 100" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none" fill="none"><path d="M2,100 L73,52 L144,100" stroke="color-mix(in srgb, var(--gold-400) 45%, transparent)" stroke-width="1"></path></svg>
+      <!-- top flap -->
+      <div style="{{ flapStyle }}"></div>
+      <!-- pulsing hint ring -->
+      <span style="{{ ringStyle }}"></span>
+      <!-- wax seal -->
+      <div style="position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);z-index:6">
+        <div style="{{ sealStyle }}">
+          <span style="font-family:var(--font-script);font-size:32px;color:#FBF3E2;line-height:1;text-shadow:0 1px 1px rgba(124,106,87,.45)">M&amp;S</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="{{ capStyle }}">Tap to open</p>
+</div>
+
+<div style="max-width:480px;margin-inline:auto;background:var(--paper-1);box-shadow:var(--shadow-col);position:relative;overflow:hidden;font-family:var(--font-sans)">
+
+  <!-- OPENING VIDEO -->
+  <div style="position:relative;width:100%;overflow:hidden;background:var(--paper-1)">
+    <video ref="{{ videoRef }}" src="uploads/Couple_walking_along_pathway_202608172311.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" onPlay="{{ ensureMuted }}" onVolumeChange="{{ ensureMuted }}" style="display:block;width:100%;height:auto;object-fit:cover"></video>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(to top,var(--paper-1) 4%,rgba(250,245,236,.55) 46%,transparent);pointer-events:none"></div>
+    <div style="position:absolute;left:0;right:0;bottom:clamp(18px,6vw,34px);text-align:center;pointer-events:none">
+      <p style="font-family:var(--font-sans);font-size:var(--t-cap);letter-spacing:var(--ls-cap);text-transform:uppercase;color:var(--gold-600);margin:0 0 6px">You are invited to the nikkah of</p>
+      <p style="font-family:var(--font-script);font-size:var(--t-script-lg);color:var(--gold-600);line-height:1;margin:0">Mujtaba &amp; Saniya</p>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  
+
+  <!-- THE DATE -->
+  
+
+  <!-- INVITATION PANEL -->
+  <div style="text-align:center;padding:clamp(24px,6vw,44px) var(--pad-x) clamp(48px,12vw,80px)">
+    <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.ArchFrame" hint-size="100%,560px">
+      <p style="font-family:var(--font-display);font-size:var(--t-display-sm);color:var(--gold-600);margin:0 0 16px">﷽</p>
+      <p style="font-family:var(--font-sans);font-size:var(--t-cap);letter-spacing:var(--ls-cap);text-transform:uppercase;color:var(--gold-600);margin:0 0 10px">IN the name of allah,<br>the most gracious and merciful</p>
+      <div style="font-family:var(--font-script);font-size:var(--t-script-lg);color:var(--gold-600);line-height:1.1;margin:8px 0">Mujtaba</div>
+      <p style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:.16em;font-size:var(--t-body-sm);color:var(--ink-500);margin:2px 0 12px">Son of <b style="font-weight: 500; color: var(--ink-700); width: 240px; height: 86px">DR. MOHAMMAD SALEEM AMBEKAR &amp; MRS. REHANA AMBEKAR</b></p>
+      <div style="font-family:var(--font-script);font-size:var(--t-script-md);color:var(--ink-400);margin:6px 0">with</div>
+      <div style="font-family:var(--font-script);font-size:var(--t-script-lg);color:var(--gold-600);line-height:1.1;margin:8px 0">Saniya</div>
+      <p style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:.16em;font-size:var(--t-body-sm);color:var(--ink-500);margin:2px 0 16px">Daughter of <b style="font-weight:500;color:var(--ink-700)">Mr &amp; Mrs Arif pathan</b></p>
+      <p style="font-family:var(--font-sans);font-weight:300;font-size:var(--t-body);line-height:var(--lh-body);color:var(--ink-500);margin:0">Join us for an evening of love, laughter, duas and unforgettable memories as we begin our forever.</p>
+    </x-import>
+  </div>
+
+  <!-- TIMELINE -->
+  <div style="text-align:center;padding:clamp(48px,12vw,88px) var(--pad-x)">
+    <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.SectionHeading" title="Wedding Timeline" divider="flourish" hint-size="100%,150px"></x-import>
+    <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.Timeline" items="{{ timeline }}" icon-size="100" hint-size="100%,640px"></x-import>
+    <div style="padding:clamp(16px,5vw,28px) 0">
+      <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.Divider" variant="flourish" hint-size="100%,40px"></x-import>
+    </div>
+    <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.Timeline" items="{{ valima }}" icon-size="100" hint-size="100%,160px"></x-import>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div style="text-align:center;padding:clamp(48px,12vw,88px) var(--pad-x)">
+    <div style="display:flex;justify-content:center;align-items:flex-end;gap:clamp(20px,8vw,44px);margin-bottom:clamp(12px,4vw,22px)">
+      
+      
+    </div>
+    <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.SectionHeading" title="The Celebration Begins" divider="flourish" hint-size="100%,150px"></x-import>
+    <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.Countdown" target="2026-10-19T19:30:00+05:30" hint-size="100%,120px"></x-import>
+  </div>
+
+  <!-- DRESS CODE -->
+  <div style="text-align:center;padding:clamp(48px,12vw,88px) var(--pad-x)">
+    <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.SectionHeading" title="Venue" hint-size="100%,150px" style="position: relative"><div style="font-size: 16px; line-height: 1; font-family: Jost, system-ui, -apple-system, 'Segoe UI', sans-serif; position: absolute; left: 468px; top: 518px">Your text here</div></x-import>
+    <p style="font-family:var(--font-sans);font-weight:300;font-size:var(--t-body);line-height:var(--lh-body);color:var(--ink-500);margin:0 0 20px">Jalsa Lawns, Ashoka Marg, Mamta Nagar, Kalpatru Nagar, Nashik - 422011</p>
+    <div style="display:flex;justify-content:center;align-items:flex-end;gap:clamp(18px,7vw,38px)">
+      
+      
+    </div>
+  </div>
+
+  <!-- RSVP -->
+  <div style="text-align:center;padding:clamp(48px,12vw,88px) var(--pad-x)">
+    <div style="display:flex;justify-content:center;align-items:flex-end;gap:clamp(20px,8vw,44px);margin-bottom:clamp(12px,4vw,22px)">
+      
+      
+    </div>
+    
+    <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.SectionHeading" title="Will You Join Us" hint-size="100%,150px"></x-import><p style="font-family:var(--font-sans);font-weight:300;font-size:var(--t-body);line-height:var(--lh-body);color:var(--ink-500);margin:0 0 8px">Kindly let us know so we can save your seat.</p>
+    <x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.Button" variant="outline" href="https://wa.me/917020710312" hint-size="240px,52px">RSVP on WhatsApp</x-import>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="position:relative;overflow:hidden;text-align:center;padding:clamp(56px,14vw,84px) var(--pad-x) 52px;background:var(--paper-3)">
+    <div style="position:absolute;top:0;left:0;width:clamp(96px,30vw,140px);opacity:.85;pointer-events:none"><x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.Ornament" name="corner-spray" size="100%" hint-size="140px,140px"></x-import></div>
+    <div style="position:absolute;top:0;right:0;width:clamp(96px,30vw,140px);opacity:.85;pointer-events:none"><x-import component-from-global-scope="ZarrinNikkahInvitationSystem_ee6182.Ornament" name="corner-spray" size="100%" flip="x" hint-size="140px,140px"></x-import></div>
+    <p style="font-family:var(--font-display);font-style:italic;font-size:var(--t-body);color:var(--ink-500);margin:0">May Allah bless this union with mercy and love.</p>
+    <p style="font-family:var(--font-script);font-size:28px;color:var(--gold-600);margin:10px 0 0">Mujtaba&amp;Saniya</p>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { phase: 'closed' };
+  videoRef = React.createRef();
+  componentDidMount() {
+    const v = this.videoRef.current;
+    if (v) { v.muted = true; v.loop = true; v.play().catch(() => {}); }
+  }
+  open = () => {
+    if (this.state.phase !== 'closed') return;
+    this.setState({ phase: 'opening' });
+    setTimeout(() => this.setState({ phase: 'lifting' }), 950);
+    setTimeout(() => this.setState({ phase: 'done' }), 1750);
+  };
+  renderVals() {
+    const p = this.state.phase;
+    const opened = p !== 'closed';
+    const lifted = p === 'lifting' || p === 'done';
+    const gone = p === 'done';
+    return {
+      shown: true,
+      videoRef: this.videoRef,
+      ensureMuted: (e) => { if (e && e.target && !e.target.muted) e.target.muted = true; },
+      open: this.open,
+      overlayStyle: {
+        position: 'fixed', inset: 0, zIndex: 60, display: 'flex', flexDirection: 'column',
+        alignItems: 'center', justifyContent: 'center', padding: '24px',
+        background: 'radial-gradient(120% 90% at 50% 20%, var(--paper-0), var(--paper-1) 55%, var(--paper-3))',
+        opacity: gone ? 0 : 1,
+        visibility: gone ? 'hidden' : 'visible',
+        pointerEvents: gone ? 'none' : 'auto',
+        transition: 'opacity .8s var(--ease-silk), visibility .8s var(--ease-silk)',
+      },
+      envWrapStyle: {
+        perspective: '1400px', cursor: 'pointer',
+        transform: lifted ? 'translateY(-6vh) scale(1.12)' : 'translateY(0) scale(1)',
+        opacity: lifted ? 0 : 1,
+        transition: 'transform 1s var(--ease-silk), opacity .9s var(--ease-silk)',
+      },
+      flapStyle: {
+        position: 'absolute', top: 0, left: 0, right: 0, height: '50%',
+        clipPath: 'polygon(0 0, 100% 0, 50% 100%)', background: 'var(--grad-foil)',
+        boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--gold-600) 40%, transparent)',
+        transformOrigin: 'top center', backfaceVisibility: 'hidden', zIndex: 4,
+        transform: opened ? 'rotateX(-172deg)' : 'rotateX(0deg)',
+        transition: 'transform 1.05s var(--ease-silk)',
+      },
+      sealStyle: {
+        width: '82px', height: '82px', borderRadius: '50%', display: 'grid', placeItems: 'center',
+        background: 'radial-gradient(circle at 35% 30%, var(--gold-400), var(--gold-600) 72%)',
+        border: '1px solid var(--gold-600)',
+        boxShadow: '0 6px 16px rgba(124,106,87,.45), inset 0 1px 3px rgba(255,255,255,.55)',
+        transform: opened ? 'scale(.25)' : 'scale(1)',
+        opacity: opened ? 0 : 1,
+        transition: 'transform .55s var(--ease-silk), opacity .5s var(--ease-silk)',
+      },
+      ringStyle: {
+        position: 'absolute', left: '50%', top: '48%', width: '82px', height: '82px',
+        borderRadius: '50%', border: '1px solid var(--gold-500)', zIndex: 5, pointerEvents: 'none',
+        animation: opened ? 'none' : 'zrSealPulse 2.4s ease-out infinite',
+        opacity: opened ? 0 : undefined,
+      },
+      capStyle: {
+        margin: '26px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--t-cap)',
+        letterSpacing: 'var(--ls-cap)', textTransform: 'uppercase', color: 'var(--gold-600)',
+        animation: 'zrHintFloat 2.6s ease-in-out infinite',
+        opacity: p === 'closed' ? 1 : 0,
+        transition: 'opacity .4s var(--ease-silk)',
+      },
+      timeline: [
+        { time: '7:00 pm', title: 'Nikah', icon: 'arch' },
+        { time: '10:30 pm', title: 'Rukhsati', icon: 'bride' },
+      ],
+      valima: [
+        { time: '7:00 pm – 11:00 pm', title: 'Valima', icon: 'dome' },
+      ],
+      shades: [
+        { value: 'var(--pastel-lilac)', label: 'Lilac' },
+        { value: 'var(--pastel-peach)', label: 'Peach' },
+        { value: 'var(--pastel-butter)', label: 'Butter' },
+        { value: 'var(--pastel-blush)', label: 'Blush' },
+        { value: 'var(--pastel-powder)', label: 'Powder' },
+        { value: 'var(--pastel-stone)', label: 'Stone' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
